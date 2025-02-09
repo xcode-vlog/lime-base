@@ -1,0 +1,16 @@
+services:
+  test-db:
+    container_name: base-project-test-db
+    image: ${DB_IMAGE}
+    restart: unless-stopped
+    ports:
+      - ${DB_PORT}:3306
+    volumes:
+      - ${DB_VOLUME}:/var/lib/mysql
+    environment:
+      - MARIADB_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+      - MARIADB_DATABASE=testdb
+      - MARIADB_USER=${DB_USER}
+      - MARIADB_PASSWORD=${DB_PASSWORD}
+      - TZ=Asia/Seoul
+

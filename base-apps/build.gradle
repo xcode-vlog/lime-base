@@ -1,0 +1,16 @@
+subprojects {
+    dependencies {
+        implementation(project(":base-commons"))
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+
+    }
+}
+
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+bootJar.enabled = false
+jar.enabled = false

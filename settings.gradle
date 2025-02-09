@@ -1,0 +1,6 @@
+rootProject.name = 'base'
+
+include(":base-apps")
+include(":base-apps:application", ":base-apps:presentation", ":base-apps:persistence")
+
+include(":base-commons")

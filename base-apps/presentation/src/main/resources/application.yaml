@@ -1,0 +1,36 @@
+server:
+  port: ${SERVER_PORT:8080}
+
+spring:
+  application:
+    name: lime-base
+  config:
+    import:
+      - 'optional:classpath:.env[.properties]'
+      - 'classpath:persistence-base-property.yaml'
+      - 'classpath:commons-base-property.yaml'
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %clr(%5p) [%cyan(%-60logger{60}).%magenta(%-25M{25}):%green(%-5line{5})] : [%yellow(${spring.application.name})] %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %5p [%-60logger{60}.%-25M{25}:%-5line{5}] : [${spring.application.name}] %msg%n"
+  file:
+    name: logs/application.log
+  level:
+    root: info
+    jdbc:
+      audit: error
+      connection: error
+      resultset: off
+      resultsettable: off
+      sqlonly: off
+      sqltiming: info
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      clean-history-on-start: false
+      max-history: 7
+      file-name-pattern: ${LOG_FILE}.%d{yyyy-MM-dd}.%i
+
+
+

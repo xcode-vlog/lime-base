@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lime.persistence.repository.mybatis.sample.SampleMybatisRepository" >
+
+    <select id="getNow" resultType="SampleResponse">
+        select now() as now
+        from dual
+    </select>
+    <select id="getSample" resultType="String">
+        select sample_text
+          from test_table
+    </select>
+</mapper>
