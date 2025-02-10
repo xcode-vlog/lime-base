@@ -1,0 +1,10 @@
+dependencies {
+    implementation(project(":base-apps:persistence:mybatis-sample"))
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+bootJar.enabled = false
+jar.enabled = true

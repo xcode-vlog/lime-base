@@ -1,6 +1,6 @@
 dependencies {
     // project
-    implementation(project(":base-apps:application"))
+    implementation(project(":base-apps:application:sample-app"))
 
     //spring web
     implementation('org.springframework.boot:spring-boot-starter-web')

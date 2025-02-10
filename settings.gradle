@@ -1,6 +1,9 @@
 rootProject.name = 'base'
 
 include(":base-apps")
-include(":base-apps:application", ":base-apps:presentation", ":base-apps:persistence")
+include(":base-apps:presentation")
+include(":base-apps:application:sample-app")
+include(":base-apps:persistence:mybatis-sample")
+
 
 include(":base-commons")
