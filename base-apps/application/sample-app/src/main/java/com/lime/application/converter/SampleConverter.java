@@ -1,4 +1,4 @@
-package com.lime.converter;
+package com.lime.application.converter;
 
 
 import com.lime.persistence.domain.response.SampleResponse;

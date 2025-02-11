@@ -1,4 +1,4 @@
-package com.lime.converter.model.response;
+package com.lime.application.converter.model.response;
 
 import com.lime.persistence.domain.response.SampleResponse;
 import lombok.Builder;
